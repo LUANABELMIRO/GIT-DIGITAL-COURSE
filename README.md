@@ -1,6 +1,3 @@
-# Curso Digital: Git
+# Projeto Santander Coders 2023
 
-## Salvados alterações no Git 
-* comando git push
-* comando git pull
-* comando git fecth
+## Página de cadastros usando HTML e CSS
