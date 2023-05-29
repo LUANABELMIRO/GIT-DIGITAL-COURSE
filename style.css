@@ -10,6 +10,8 @@
 
 :root {
     font-size: 62.5%;
+    --default-border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    --default-border-radius: 1.2rem;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -52,11 +54,14 @@ width: 60rem;
 height: 50rem;
 border: 0.1rem solid rgba(0, 0, 0, 0.15);
 padding: 4.4rem 5.7rem;
-border-radius: 1.2rem;
+border-radius: var(--default-border-radius);
+position: relative;
 }
 
 main h2 {
-max-width: 43rem;
+margin-bottom: 5rem;
+margin-top: rem;
+max-width: 80rem;
 font-size: 3.6rem;
 font-weight: 500;
 }
@@ -94,6 +99,22 @@ box-shadow: 0px 4px 4px 0px #00000040;
 
 }
 
+main header {
+    display: flex;
+    gap:1.8rem;
+    align-items: center;
+    margin-top: -3rem;
+
+}
+
+main header i {
+    font-size: 2rem;
+    color: #FF5678;
+    margin-bottom: 0rem;
+    margin-top: -2rem;
+
+}
+
 main footer p {
 font-family: 'Poppins', sans-serif;
 font-style: normal;
@@ -122,3 +143,65 @@ text-decoration-line: underline;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+
+
+
+
+   main form :is(input, select) {
+   width: 489px;
+   height: 5.5rem;
+   display:block;
+   font-family: 'Poppins';
+   background: #FFFFFF;
+   border: var(--default-border);
+   border-radius: var(--default-border-radius)
+}
+ 
+main form select {
+    appearance: none;
+}
+
+main form .select-div {
+    position: relative;
+}
+
+main form .select-div::after {
+ top:1.6rem;
+ right:1.2rem;
+ font-size: 2.2rem;
+ content: '\f107';
+ font-family: 'Font Awesome 6 Free';
+ font-weight: 600;
+ position: absolute;
+ z-index: 1;
+ cursor: pointer;
+ color: #35E6E9;
+}
+
+main form .points {
+position: relative;
+}
+
+main form input + button {
+    position: absolute;
+    right: -4.8rem;
+    top: calc(2rem + 2.4rem);
+    background-color: transparent;
+    border: none;
+    color: #35E6E9;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+main form {
+    margin-top: -5rem;
+}
+
+main form label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-bottom: 1rem;
+    display: block;
+}
+
